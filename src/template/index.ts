@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import "./ioc.ts";
 import { App } from "./server";
 import dotenv from "dotenv";
 import indexController from "./controllers/index.controller";

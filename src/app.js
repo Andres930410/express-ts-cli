@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { copyRecursiveSync } = require("./util");
 const colors = require("colors");
-const { NAMES, pack } = require("./constants");
+const { NAMES, pack, gitignore, eslintrc } = require("./constants");
 
 class App {
   constructor(name, author, description, keywords) {
@@ -90,10 +90,11 @@ class App {
       path.join("./", this.name, NAMES.pack),
       JSON.stringify(this.pack)
     );
-    copyRecursiveSync(
-      path.resolve(__dirname, NAMES.path, NAMES.env),
-      path.join("./", this.name, NAMES.env)
+    fs.writeFileSync(
+      path.join("./", this.name, NAMES.eslintrc),
+      JSON.stringify(eslintrc)
     );
+    fs.writeFileSync(path.join("./", this.name, NAMES.gitignore), gitignore);
     copyRecursiveSync(
       path.resolve(__dirname, NAMES.path, NAMES.server),
       path.join("./", this.name, NAMES.pathDest, NAMES.server)
@@ -101,14 +102,6 @@ class App {
     copyRecursiveSync(
       path.resolve(__dirname, NAMES.path, NAMES.index),
       path.join("./", this.name, NAMES.pathDest, NAMES.index)
-    );
-    copyRecursiveSync(
-      path.resolve(__dirname, NAMES.path, NAMES.eslintrc),
-      path.join("./", this.name, NAMES.eslintrc)
-    );
-    copyRecursiveSync(
-      path.resolve(__dirname, NAMES.path, NAMES.gitignore),
-      path.join("./", this.name, NAMES.gitignore)
     );
     copyRecursiveSync(
       path.resolve(__dirname, NAMES.path, NAMES.tsconfig),

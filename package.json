@@ -1,7 +1,6 @@
 {
-  "name": "express-ts-cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@agutierrezt9410/express-ts-cli",
+  "version": "0.0.6",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +18,7 @@
   "author": "Andres Gutierrez <agutierrezt@slabcode.com>",
   "license": "MIT",
   "bin": {
-    "express-ts-cli": "./index.js"
+    "express-ts": "index.js"
   },
   "bugs": {
     "url": "https://github.com/Andres930410/express-ts-cli/issues"
@@ -28,5 +27,7 @@
   "dependencies": {
     "colors": "1.4.0",
     "yargs": "17.3.1"
-  }
+  },
+  "devDependencies": {},
+  "description": "CLI to generate express project with ts and dependency injection, using a n-tier architecture"
 }

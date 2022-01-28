@@ -4,7 +4,6 @@ const NAMES = {
   utils: "utils",
   decorators: "decorators",
   controllres: "controllers",
-  env: ".env",
   eslintrc: ".eslintrc",
   tsconfig: "tsconfig.json",
   gitignore: ".gitignore",
@@ -59,7 +58,63 @@ const pack = {
   },
 };
 
+const eslintrc = {
+  root: true,
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+};
+
+const gitignore = `
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+
+# Build
+public/css/main.css
+
+# Coverage reports
+coverage
+
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
+
+# ignore yarn.lock
+yarn.lock`;
+
 module.exports = {
   NAMES,
   pack,
+  eslintrc,
+  gitignore,
 };

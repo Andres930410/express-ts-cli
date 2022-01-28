@@ -6,6 +6,10 @@ export enum Metadata {
   Code = "Code",
 }
 
+export enum DI {
+  GenericClient = "GenericClient",
+}
+
 export enum StatusCode {
   Ok = 200,
   Created = 201,
