@@ -45,7 +45,7 @@ Once the command is succesful a new folder with the name parameter would be gene
 - **src/services**: Folder where the services should be stored, this services hold the bussiness rules of project, an example service is shipped with the template.
 - **src/types**: Folder wheree the **typescript** types should be created.
 - **src/utils**: Folder where the constants and utility methods should be created.
-- **src/di.ts**: File where thee IoC contiainer would be configured.
+- **src/ioc.ts**: File where thee IoC contiainer would be configured.
 - **src/server.ts**: File where the express application is created.
 - **src/index.ts**: This file is the starting point of the project.
 

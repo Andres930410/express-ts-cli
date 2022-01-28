@@ -1,4 +1,5 @@
 const NAMES = {
+  ioc: "ioc.ts",
   path: "template",
   pathDest: "src",
   utils: "utils",
