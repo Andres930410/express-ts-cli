@@ -1,0 +1,32 @@
+{
+  "name": "express-ts-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Andres930410/express-ts-cli.git"
+  },
+  "keywords": [
+    "express",
+    "cli",
+    "js",
+    "generator"
+  ],
+  "author": "Andres Gutierrez <agutierrezt@slabcode.com>",
+  "license": "MIT",
+  "bin": {
+    "express-ts-cli": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Andres930410/express-ts-cli/issues"
+  },
+  "homepage": "https://github.com/Andres930410/express-ts-cli#readme",
+  "dependencies": {
+    "colors": "1.4.0",
+    "yargs": "17.3.1"
+  }
+}
