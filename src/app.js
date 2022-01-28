@@ -100,6 +100,10 @@ class App {
       path.join("./", this.name, NAMES.pathDest, NAMES.server)
     );
     copyRecursiveSync(
+      path.resolve(__dirname, NAMES.path, NAMES.ioc),
+      path.join("./", this.name, NAMES.pathDest, NAMES.ioc)
+    );
+    copyRecursiveSync(
       path.resolve(__dirname, NAMES.path, NAMES.index),
       path.join("./", this.name, NAMES.pathDest, NAMES.index)
     );
