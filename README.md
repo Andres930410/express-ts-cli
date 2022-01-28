@@ -31,7 +31,7 @@ From your terminal or cmd you can use the command **express-ts** to create a new
 
 # Folder structure
 
-Once the command is succesful a new folder with the name of the parameter would be generated, this folder constains the following content:
+Once the command is successful a new folder with the name of the parameter would be generated, this folder constains the following content:
 
 - **src**: Folder where all the **typescript** content would be stored.
 - **src/clients**: Folder where the http clients should be created, the folder has a generic http client using **axios**.
@@ -41,11 +41,11 @@ Once the command is succesful a new folder with the name of the parameter would 
 - **src/decorators**: Folder where custom decorators are created, the template has some decorators to built-in, which ease the implementation of express.
 - **src/dtos**: Folder where the request and response DTOs should be created.
 - **src/errors**: Folder where the custom errors are stored.
-- **src/middlewares**: Folder where the **express** middleware should stored, an error middleware is created with the template.
+- **src/middlewares**: Folder where the **express** middleware should be stored, an error middleware is created with the template.
 - **src/services**: Folder where the services should be stored, this services hold the bussiness rules of project, an example service is created with the template.
-- **src/types**: Folder wheree the **typescript** types should be created.
+- **src/types**: Folder where the **typescript** types should be created.
 - **src/utils**: Folder where the constants and utility methods should be created.
-- **src/ioc.ts**: File where thee IoC contiainer would be configured.
+- **src/ioc.ts**: File where the IoC container would be configured.
 - **src/server.ts**: File where the express application is created.
 - **src/index.ts**: This file is the starting point of the project.
 
