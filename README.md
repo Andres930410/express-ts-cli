@@ -8,6 +8,7 @@ Library to generate a template of an express aplication using **Typescript** and
 - [How to use](#how-to-use)
 - [Folder structure](#folder-structure)
 - [Example](#example)
+- [Changelog](#changelog)
 - [Credits](#credits)
 - [License](#license)
 
@@ -19,6 +20,12 @@ Using npm:
 $ npm install @agutierrezt9410/express-ts-cli -g
 ```
 
+Using npx:
+
+```bash
+$ npx @agutierrezt9410/express-ts-cli -a Andres Gutierrez -n example
+```
+
 ## How to use
 
 From your terminal or cmd you can use the command **express-ts** to create a new project based from the template, the cli can receive some parameters to customize the application generated.
@@ -27,7 +34,7 @@ From your terminal or cmd you can use the command **express-ts** to create a new
 - **-a, --author**: Required, the name of the author of the project, this parameter would be used in the **package.json**.
 - **-d, --description**: Optional, the description of the project, this parameter would be used in the **package.json**.
 - **-k, --keywords**: Optional, array of keywords to be used in the **package.json**.
-- **--help**: Command that you the options of the cli.
+- **--help**: Command that shows the cli options.
 
 # Folder structure
 
@@ -57,6 +64,18 @@ $ cd example
 $ npm i
 $ npm start
 ```
+
+Or if you want to restart your server when there is change in your files you can run
+
+```bash
+$ npm run watch
+```
+
+## Changelog
+
+### 0.0.12 (January 29, 2022)
+
+- Added nodemon to restart server automatically.
 
 ## Credits
 

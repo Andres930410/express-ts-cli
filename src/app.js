@@ -111,6 +111,10 @@ class App {
       path.resolve(__dirname, NAMES.path, NAMES.tsconfig),
       path.join("./", this.name, NAMES.tsconfig)
     );
+    copyRecursiveSync(
+      path.resolve(__dirname, NAMES.path, NAMES.nodemon),
+      path.join("./", this.name, NAMES.nodemon)
+    );
   }
 
   copyControllers() {

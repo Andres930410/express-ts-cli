@@ -7,6 +7,7 @@ const NAMES = {
   controllres: "controllers",
   eslintrc: ".eslintrc",
   tsconfig: "tsconfig.json",
+  nodemon: "nodemon.json",
   gitignore: ".gitignore",
   types: "types",
   services: "services",
@@ -30,6 +31,7 @@ const pack = {
     build: "tsc",
     prestart: "npm run build",
     start: "node dist/index.js",
+    watch: "./node_modules/nodemon/bin/nodemon.js",
     test: 'echo "Error: no test specified" && exit 1',
   },
   keywords: [],
@@ -41,6 +43,7 @@ const pack = {
     "@typescript-eslint/eslint-plugin": "5.10.0",
     "@typescript-eslint/parser": "5.10.0",
     eslint: "8.7.0",
+    nodemon: "2.0.15",
     typescript: "4.5.4",
   },
   dependencies: {
