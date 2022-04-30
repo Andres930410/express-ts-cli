@@ -1,4 +1,4 @@
-import { Method } from "./constants";
+import { Method } from "@/utils/constants";
 
 export interface RouteDescripor {
   path: string;

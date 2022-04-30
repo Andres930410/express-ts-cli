@@ -1,8 +1,8 @@
-import { ParameterDescriptor } from "./parameter.descriptor";
-import { ParameterFactory } from "./parameter.factory";
-import { Metadata, Method, Param } from "./constants";
-import { MiddlewareDescriptor } from "./middlware.descriptor";
-import { RouteDescripor } from "./routes.descriptor";
+import { ParameterDescriptor } from "@/utils/parameter.descriptor";
+import { ParameterFactory } from "@/utils/parameter.factory";
+import { Metadata, Method, Param } from "@/utils/constants";
+import { MiddlewareDescriptor } from "@/utils/middlware.descriptor";
+import { RouteDescripor } from "@/utils/routes.descriptor";
 export const saveMiddleware = (
   // eslint-disable-next-line @typescript-eslint/ban-types
   target: Function,

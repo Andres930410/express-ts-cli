@@ -27,13 +27,20 @@ class App {
     this.copyDecorators();
     this.copyControllers();
     this.copyFiles();
-    this.copyTypes();
     this.copyServices();
     this.copyMiddlewares();
     this.copyErrors();
     this.copyDTOs();
+    this.copyTests()
     this.copyDb();
     this.copyClients();
+  }
+
+  copyTests() {
+    copyRecursiveSync(
+      path.resolve(__dirname, NAMES.path, NAMES.tests),
+      path.join("./", this.name, NAMES.pathDest, NAMES.tests)
+    );
   }
 
   copyClients() {
@@ -78,13 +85,6 @@ class App {
     );
   }
 
-  copyTypes() {
-    copyRecursiveSync(
-      path.resolve(__dirname, NAMES.path, NAMES.types),
-      path.join("./", this.name, NAMES.pathDest, NAMES.types)
-    );
-  }
-
   copyFiles() {
     fs.writeFileSync(
       path.join("./", this.name, NAMES.pack),
@@ -115,6 +115,10 @@ class App {
       path.resolve(__dirname, NAMES.path, NAMES.nodemon),
       path.join("./", this.name, NAMES.nodemon)
     );
+    copyRecursiveSync(
+      path.resolve(__dirname, NAMES.path, NAMES.jest),
+      path.join("./", this.name, NAMES.jest)
+    );
   }
 
   copyControllers() {
@@ -142,6 +146,12 @@ class App {
     if (!fs.existsSync(this.name)) {
       fs.mkdirSync(this.name, { recursive: true });
       fs.mkdirSync(path.join(this.name, NAMES.pathDest));
+    }
+  }
+
+  delete() {
+    if (fs.existsSync(this.name)) {
+      fs.rm(path, { recursive: true })
     }
   }
 }

@@ -1,21 +1,10 @@
+import { ErrorInfo } from "@/dtos/error.type";
 export class ServerError extends Error {
-  private _code: number;
-  private _errors: string[] | undefined;
-  constructor(
-    code: number,
-    message: string,
-    errors: string[] | undefined = undefined
-  ) {
+  public readonly code: number;
+  public readonly errors?: ErrorInfo;
+  constructor(code: number, message: string, errors?: ErrorInfo) {
     super(message);
-    this._code = code;
-    this._errors = errors;
-  }
-
-  get code(): number {
-    return this._code;
-  }
-
-  get errors(): string[] | undefined {
-    return this._errors;
+    this.code = code;
+    this.errors = errors;
   }
 }

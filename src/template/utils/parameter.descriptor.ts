@@ -1,4 +1,4 @@
-import { Param } from "./constants";
+import { Param } from "@/utils/constants";
 
 export interface ParameterDescriptor {
   index: number;

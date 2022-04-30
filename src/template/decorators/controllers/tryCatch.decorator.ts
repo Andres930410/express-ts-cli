@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
-import { ServerError } from "../../errors/server.error";
+import { ServerError } from "@/errors/server.error";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 export const tryCatch = (target: Function) => {

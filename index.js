@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 const yargs = require("yargs");
+const fs = require('fs')
 const App = require("./src/app");
 const colors = require("colors");
 const options = yargs
@@ -39,5 +40,6 @@ const app = new App(options.n, options.a, options.d, options.k);
 try {
   app.init();
 } catch (e) {
+  app.delete()
   console.error(`${e.message}...............................[FAIL]`.red);
 }

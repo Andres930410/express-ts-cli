@@ -1,18 +1,18 @@
-import { PORT, StatusCode } from "./utils/constants";
+import { PORT, StatusCode } from "@/utils/constants";
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-extra-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { RouteDescripor } from "./utils/routes.descriptor";
+import { RouteDescripor } from "@/utils/routes.descriptor";
 /* eslint-disable @typescript-eslint/ban-types */
 import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
-import errorMiddleware from "./middlewares/error.middleware";
-import { BaseController } from "./controllers/base.controller";
-import { Metadata, Param } from "./utils/constants";
-import { MiddlewareDescriptor } from "./utils/middlware.descriptor";
-import { ParameterDescriptor } from "./utils/parameter.descriptor";
+import errorMiddleware from "@/middlewares/error.middleware";
+import { BaseController } from "@/controllers/base.controller";
+import { Metadata, Param } from "@/utils/constants";
+import { MiddlewareDescriptor } from "@/utils/middlware.descriptor";
+import { ParameterDescriptor } from "@/utils/parameter.descriptor";
 import { container } from "tsyringe";
 
 export class App {

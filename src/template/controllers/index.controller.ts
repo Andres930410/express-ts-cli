@@ -1,3 +1,3 @@
-import { HelloController } from "./hello.controller";
+import { HelloController } from "@/controllers/hello.controller";
 
 export default [HelloController];

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { saveMiddleware } from "../../utils/functions";
-import { MiddlewareDescriptor } from "../../utils/middlware.descriptor";
+import { saveMiddleware } from "@/utils/functions";
+import { MiddlewareDescriptor } from "@/utils/middlware.descriptor";
 
 export const middleware = (...args: MiddlewareDescriptor[]) => {
   return (

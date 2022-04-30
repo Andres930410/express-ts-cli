@@ -1,8 +1,8 @@
 import { singleton } from "tsyringe";
-import { controller } from "../decorators/controllers/controller.decorator";
-import { get } from "../decorators/methods/get.decorator";
-import { HelloService } from "../services/hello.service";
-import { BaseController } from "./base.controller";
+import { controller } from "@/decorators/controllers/controller.decorator";
+import { get } from "@/decorators/methods/get.decorator";
+import { HelloService } from "@/services/hello.service";
+import { BaseController } from "@/controllers/base.controller";
 
 @singleton()
 @controller("/")

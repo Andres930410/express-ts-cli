@@ -1,4 +1,4 @@
-import { Metadata } from "../../utils/constants";
+import { Metadata } from "@/utils/constants";
 
 export const controller = (prefix = "/"): ClassDecorator => {
   // eslint-disable-next-line @typescript-eslint/ban-types

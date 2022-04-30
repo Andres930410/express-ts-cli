@@ -2,5 +2,5 @@ import { Request, Response, NextFunction } from "express";
 export type MiddlewareDescriptor = (
   req: Request,
   res: Response,
-  next?: NextFunction
+  next: NextFunction
 ) => Promise<void> | void;

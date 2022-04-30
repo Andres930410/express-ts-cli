@@ -1,7 +1,7 @@
-import { DI } from "./utils/constants";
+import { DI } from "@/utils/constants";
 import { container } from "tsyringe";
-import { GenericClient } from "./clients/generic.http";
+import { GenericClient } from "@/clients/generic.http";
 
 container.register<GenericClient>(DI.GenericClient, {
-  useValue: new GenericClient("https://api.publicapis.org"),
+  useValue: new GenericClient(""),
 });

@@ -1,4 +1,4 @@
-import { Metadata, StatusCode } from "../../utils/constants";
+import { Metadata, StatusCode } from "@/utils/constants";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 export const statusCode = (code = StatusCode.Ok): MethodDecorator => {
