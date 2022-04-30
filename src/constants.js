@@ -52,7 +52,8 @@ const pack = {
     typescript: "4.5.4",
     "jest": "27.5.1",
     "ts-jest": "27.1.4",
-    "tsc-alias": "1.6.4"
+    "tsc-alias": "1.6.4",
+    "ts-node": "^10.7.0"
   },
   dependencies: {
     axios: "0.25.0",
