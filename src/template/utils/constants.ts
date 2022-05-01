@@ -2,7 +2,7 @@ export enum Metadata {
   Prefix = "Prefix",
   Routes = "Routes",
   Middlewares = "Middlewares",
-  Paramters = "Parameters",
+  Parameters = "Parameters",
   Code = "Code",
 }
 
@@ -16,7 +16,7 @@ export enum StatusCode {
   NoContent = 204,
   BadRequest = 400,
   UnAuthorized = 401,
-  Forbiden = 403,
+  Forbidden = 403,
   NotFound = 404,
   InternalServerError = 500,
 }

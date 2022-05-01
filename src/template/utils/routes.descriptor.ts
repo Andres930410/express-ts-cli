@@ -1,6 +1,6 @@
 import { Method } from "@/utils/constants";
 
-export interface RouteDescripor {
+export interface RouteDescriptor {
   path: string;
   method: Method;
   methodName: string;

@@ -13,39 +13,39 @@ export class GenericClient {
     });
   }
 
-  async get<TResponse>(path = "/", cofing?: AxiosRequestConfig): Promise<TResponse> {
-    const result = (await this.instance.get(path, cofing))
+  async get<TResponse>(path = "/", config?: AxiosRequestConfig): Promise<TResponse> {
+    const result = (await this.instance.get(path, config))
     return result.data as TResponse;
   }
 
   async post<TRequest, TResponse>(
     path = "/",
     data: TRequest,
-    cofing?: AxiosRequestConfig
+    config?: AxiosRequestConfig
   ): Promise<TResponse> {
-    const result = (await this.instance.post(path, data, cofing));
+    const result = (await this.instance.post(path, data, config));
     return result.data as TResponse;
   }
 
   async put<TRequest, TResponse>(
     path = "/",
     data: TRequest,
-    cofing?: AxiosRequestConfig
+    config?: AxiosRequestConfig
   ): Promise<TResponse> {
-    const result = (await this.instance.put(path, data, cofing));
+    const result = (await this.instance.put(path, data, config));
     return result.data as TResponse;
   }
 
   async patch<TRequest, TResponse>(
     path = "/",
     data: TRequest,
-    cofing?: AxiosRequestConfig
+    config?: AxiosRequestConfig
   ): Promise<TResponse> {
-    const result = (await this.instance.patch(path, data, cofing));
+    const result = (await this.instance.patch(path, data, config));
     return result.data as TResponse;
   }
 
-  async delete(path = "/", cofing?: AxiosRequestConfig): Promise<void> {
-    await this.instance.delete(path, cofing);
+  async delete(path = "/", config?: AxiosRequestConfig): Promise<void> {
+    await this.instance.delete(path, config);
   }
 }

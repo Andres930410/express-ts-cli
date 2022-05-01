@@ -1,8 +1,8 @@
 import { ParameterDescriptor } from "@/utils/parameter.descriptor";
 import { ParameterFactory } from "@/utils/parameter.factory";
 import { Metadata, Method, Param } from "@/utils/constants";
-import { MiddlewareDescriptor } from "@/utils/middlware.descriptor";
-import { RouteDescripor } from "@/utils/routes.descriptor";
+import { MiddlewareDescriptor } from "@/utils/middleware.descriptor";
+import { RouteDescriptor } from "@/utils/routes.descriptor";
 export const saveMiddleware = (
   // eslint-disable-next-line @typescript-eslint/ban-types
   target: Function,
@@ -45,7 +45,7 @@ export const createRoute = (
   const routes = Reflect.getMetadata(
     Metadata.Routes,
     target
-  ) as Array<RouteDescripor>;
+  ) as Array<RouteDescriptor>;
   routes.push({
     method,
     path,
@@ -62,9 +62,9 @@ export const paramDecoratorFactory = (type: Param): ParameterFactory => {
       propertyKey: string | symbol,
       parameterIndex: number
     ) => {
-      if (!Reflect.hasMetadata(Metadata.Paramters, target.constructor)) {
+      if (!Reflect.hasMetadata(Metadata.Parameters, target.constructor)) {
         Reflect.defineMetadata(
-          Metadata.Paramters,
+          Metadata.Parameters,
           new Map<string, ParameterDescriptor[]>(),
           target.constructor
         );
@@ -76,7 +76,7 @@ export const paramDecoratorFactory = (type: Param): ParameterFactory => {
         name,
       };
       const parameterList = Reflect.getMetadata(
-        Metadata.Paramters,
+        Metadata.Parameters,
         target.constructor
       ) as Map<string, ParameterDescriptor[]>;
 
@@ -86,7 +86,7 @@ export const paramDecoratorFactory = (type: Param): ParameterFactory => {
         parameterList.set(propertyKey.toString(), [paramMetadata]);
       }
       Reflect.defineMetadata(
-        Metadata.Paramters,
+        Metadata.Parameters,
         parameterList,
         target.constructor
       );

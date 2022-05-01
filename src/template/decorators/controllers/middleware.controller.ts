@@ -1,5 +1,5 @@
 import { saveMiddleware } from "@/utils/functions";
-import { MiddlewareDescriptor } from "@/utils/middlware.descriptor";
+import { MiddlewareDescriptor } from "@/utils/middleware.descriptor";
 
 export const middleware = (...args: MiddlewareDescriptor[]): ClassDecorator => {
   // eslint-disable-next-line @typescript-eslint/ban-types

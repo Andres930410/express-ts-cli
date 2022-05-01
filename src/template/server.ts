@@ -3,7 +3,7 @@ import { PORT, StatusCode } from "@/utils/constants";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-extra-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { RouteDescripor } from "@/utils/routes.descriptor";
+import { RouteDescriptor } from "@/utils/routes.descriptor";
 /* eslint-disable @typescript-eslint/ban-types */
 import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
@@ -11,7 +11,7 @@ import helmet from "helmet";
 import errorMiddleware from "@/middlewares/error.middleware";
 import { BaseController } from "@/controllers/base.controller";
 import { Metadata, Param } from "@/utils/constants";
-import { MiddlewareDescriptor } from "@/utils/middlware.descriptor";
+import { MiddlewareDescriptor } from "@/utils/middleware.descriptor";
 import { ParameterDescriptor } from "@/utils/parameter.descriptor";
 import { container } from "tsyringe";
 
@@ -39,12 +39,12 @@ export class App {
         c.prototype.constructor
       ) as BaseController;
       const prefix: string = Reflect.getMetadata(Metadata.Prefix, c);
-      const routes: RouteDescripor[] = Reflect.getMetadata(Metadata.Routes, c);
+      const routes: RouteDescriptor[] = Reflect.getMetadata(Metadata.Routes, c);
       const middlewares: Map<string, MiddlewareDescriptor[]> =
         Reflect.getMetadata(Metadata.Middlewares, c) ||
         new Map<string, MiddlewareDescriptor[]>();
       const parameters: Map<string, ParameterDescriptor[]> =
-        Reflect.getMetadata(Metadata.Paramters, c) ||
+        Reflect.getMetadata(Metadata.Parameters, c) ||
         new Map<string, ParameterDescriptor[]>();
 
       routes.forEach((r) => {
